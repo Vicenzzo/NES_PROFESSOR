@@ -1,0 +1,61 @@
+.containerChamada{
+    background-color: #23212E;
+    width: 800px;
+    height: 100%;
+    margin: 7% auto;
+    margin-left: 30%;
+    border-radius: 20px;
+}
+.headerChamada{
+    display: flex;
+
+}
+label{
+    justify-content: right;
+    align-items: right;
+    text-align: right;
+    margin-top: 30px;
+}
+h2{
+    margin-left: 40px;
+}
+
+.containerChamadaAluno{
+    width: 800px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+.cardChamadaAluno{
+    background-color: #2A2836;
+    flex: 1 1 300px;
+    height: 120px;
+    margin:  10px 30px 10px 30px;
+    border-radius: 20px;
+    display: flex;
+
+}
+.cardChamadaAluno img{
+    margin-top: 20px;
+    margin-left: 25px;
+    width: 80px;
+    height: 65px;
+    
+    
+}
+
+input[type=date]{
+   
+
+
+    border: none;
+    background-color: #2561D1;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+input[type=checkbox]{
+    background-color: transparent;
+    border: 1px solid #2561D1;
+}

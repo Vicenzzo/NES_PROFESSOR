@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="icon" type="image/x-icon" href="../Assets/image/favicon.ico">
+    <link  rel="stylesheet"  href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Cadastro Notas</title>
+    <link rel="stylesheet" href="chamada.css">
+    <style>
+        input[type=text]{
+            color: white;
+            width: 40px; height: 40px; text-align: center;border-radius: 50%; padding-left: 0; margin: 0px  20px 0px 0px;
+        }
+        .containerChamada{
+            margin-left: 25%; margin-right: 10%;
+        }
+        .alfa_order{
+            margin-left: 35%;
+        }
+        .bt_alfa_order, .bt_ra_order{
+            width: 10px; height: 15px; margin-top: 4%; margin-left: 10px;
+            background-color: transparent; border: 1px solid #2A5ECA;
+
+        }.ra_order{
+            margin-left: 20px;
+        }
+        .desc_curso_semestre{
+            float: left; margin-left: 40px; color: #2A5ECA;
+        }
+        .container_data_enviar{
+            
+            padding-top: 20px; margin-left: 60%;
+        }
+        .bt_enviar_nota{
+            margin-left: 10px;color: white; border: 2px solid #2A5ECA; background-color: transparent;  padding: 10px;
+                border-radius: 20px; width: 150px;
+        }
+        .txt_nome_do_aluno{
+            margin-bottom:-12px;
+        }
+        .txt_ra_aluno{
+            margin-bottom: 10px;
+        }
+        .link_mais_infos_aluno{
+            text-decoration: none; color: #2A5ECA;
+        }
+        .container_titulos_das_notas{
+            display: flex;
+        }
+        .titulo_notas_nota_um, .titulo_notas_nota_dois, .titulo_notas_nota_tres, .titulo_notas_trabalho{
+            margin-top: 30px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .titulo_notas_nota_um{
+            margin-left: 160%;
+        }
+        .titulo_notas_nota_dois, .titulo_notas_nota_tres{
+            margin-left: 19%;
+        }
+        .titulo_notas_trabalho{
+            margin-left: 27%;
+        }
+        .container_input_notas{
+            margin: 8% auto; display: flex;
+        }
+    </style>
+    <script>
+        const changeImage = (e) => {
+            document.getElementById("Myelement").style.backgroundImage = "url(check2.svg)";
+            var teste =  document.getElementById("Myelement");
+            console.log(teste.target);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+          
+           <a href="index.html" class="nav-logo" title="Siga 2.0"></a>
+         <div class="nav-menu" id="nav-menu">
+           <ul class="nav-list">
+           <li class="nav-item"> 
+           <a href="tt.html" class="nav-link-active nav-link" title= "Perfil">
+           <i class="bi bi-person-circle link-icon"></i>
+           <span class="link-text">Perfil </span>
+           </a>
+           </li>
+     
+           <li class="nav-item">
+           <a href="https://deadwordyaccounting.guilhermeggg.repl.co/" class="nav-link"  title= "Visualizar suas Turmas">
+           <i class="bi bi-search link-icon"></i>
+           <span class="link-text">  Visualizar suas Turmas </span>
+           </a>
+           </li >
+     
+           <li class="nav-item">
+           <a href="teste.html" class="nav-link"  title= "Salas de Aula">
+           <i class="material-icons link-icon">school</i>
+           <span class="link-text">  Salas de Aula </span>
+           </a>
+           </li>
+     
+           <li class="nav-item">
+           <a href="t.html" class="nav-link"  title= "Adicionar Tarefas">
+           <i class="bi bi-file-earmark-plus link-icon"></i>
+           <span class="link-text"> Adicionar Tarefas </span>
+           </a>
+           </li>
+         
+           <li class="nav-item">
+           <a href="t.html" class="nav-link"  title= "Termos de uso">
+           <i class="bi bi-file-earmark-text link-icon"></i>
+           <span class="link-text"> Termos de uso </span>
+           </a>
+           </li>
+           </ul>
+         </div>  
+          
+           <div class="nav-options">
+             <a href="index.html" class="nav-link" title="Sair">
+               <i class="bi bi-x-circle-fill link-icon link-exit"></i>
+               <span class="link-text">Sair</span>
+             </a>
+             <i class="bi bi-list menu-burger " id="nav-toggle"></i>
+           </div>
+       </nav>
+     </header>
+
+
+<!-- COLOCAR TUDO NA FOLHA DE ESTILO EM CASCATA POR FAVOR SEU ANIMAL VICENZZO TOTH -->
+
+     <div class="containerChamada">
+        <div class="headerChamada">
+            <h2>Recursos Humanos 2° <br>
+            semestre - Manhã</h2>
+            <label for="cbOrderAfa" class="alfa_order">Alfa. ord.</label>
+            
+            <button onclick="changeImage()" value="1" class="bt_alfa_order" id="Myelement"></button>
+            
+            <label for="cbOrderRA" class="ra_order">RA. ord.</label>
+            <button class="bt_ra_order"></button>
+        </div>
+        <div class="handleChamadaAluno">
+            <h5 class="desc_curso_semestre">Curso/Semestre </h5>
+            <div class="container_data_enviar">
+             
+                <input type="date" name="daChamada" id="daChamada">
+                <span id="#"></span>
+                <button class="bt_enviar_nota">Enviar</button>
+            </div>
+        </div>
+        <div class="containerChamadaAluno">
+            <div class="cardChamadaAluno">
+                 <img  src="foto-perfil-redonda.webp" alt="">
+                 <div>
+                    <h4 class="txt_nome_do_aluno">Vicenzzo Toth</h4>
+                    <p class="txt_ra_aluno">RA: 11112222333</p>
+                    <a href="#" class="link_mais_infos_aluno">Mais Infos</a>
+                </div>
+                <div class="container_titulos_das_notas">
+                   <label class="titulo_notas_nota_um" for="">N1</label>
+                   <label class="titulo_notas_nota_dois" for="">N2</label>
+                   <label class="titulo_notas_nota_tres" for="">N3</label>
+                   <label class="titulo_notas_trabalho" for="">T</label>
+                </div>
+                <div class="container_input_notas">
+                    <input class="input_text_notas" type="text" maxlength="1">
+                    <input class="input_text_notas" type="text" maxlength="1">
+                    <input class="input_text_notas" type="text" maxlength="1">
+                    <input class="input_text_notas" type="text" maxlength="1">
+                </div>
+            </div>
+            <div class="cardChamadaAluno">
+                <img  src="foto-perfil-redonda.webp" alt="">
+                 <div>
+                    <h4 class="txt_nome_do_aluno">Vicenzzo Toth</h4>
+                    <p class="txt_ra_aluno">RA: 11112222333</p>
+                    <a href="#" class="link_mais_infos_aluno">Mais Infos</a>
+                </div>
+                <div class="container_titulos_das_notas">
+                   <label class="titulo_notas_nota_um" for="">N1</label>
+                   <label class="titulo_notas_nota_dois" for="">N2</label>
+                   <label class="titulo_notas_nota_tres" for="">N3</label>
+                   <label class="titulo_notas_trabalho" for="">T</label>
+                </div>
+                <div class="container_input_notas">
+                    <input class="input_text_notas" type="text" maxlength="1">
+                    <input class="input_text_notas" type="text" maxlength="1">
+                    <input class="input_text_notas" type="text" maxlength="1">
+                    <input class="input_text_notas" type="text" maxlength="1">
+                </div>
+            </div>
+            <div class="cardChamadaAluno">
+                <img  src="foto-perfil-redonda.webp" alt="">
+                <div>
+                   <h4 class="txt_nome_do_aluno">Vicenzzo Toth</h4>
+                   <p class="txt_ra_aluno">RA: 11112222333</p>
+                   <a href="#" class="link_mais_infos_aluno">Mais Infos</a>
+               </div>
+               <div class="container_titulos_das_notas">
+                  <label class="titulo_notas_nota_um" for="">N1</label>
+                  <label class="titulo_notas_nota_dois" for="">N2</label>
+                  <label class="titulo_notas_nota_tres" for="">N3</label>
+                  <label class="titulo_notas_trabalho" for="">T</label>
+               </div>
+               <div class="container_input_notas">
+                   <input class="input_text_notas" type="text" maxlength="1">
+                   <input class="input_text_notas" type="text" maxlength="1">
+                   <input class="input_text_notas" type="text" maxlength="1">
+                   <input class="input_text_notas" type="text" maxlength="1">
+               </div>
+            </div>
+            <div class="cardChamadaAluno">
+                <img  src="foto-perfil-redonda.webp" alt="">
+                <div>
+                   <h4 class="txt_nome_do_aluno">Vicenzzo Toth</h4>
+                   <p class="txt_ra_aluno">RA: 11112222333</p>
+                   <a href="#" class="link_mais_infos_aluno">Mais Infos</a>
+               </div>
+               <div class="container_titulos_das_notas">
+                  <label class="titulo_notas_nota_um" for="">N1</label>
+                  <label class="titulo_notas_nota_dois" for="">N2</label>
+                  <label class="titulo_notas_nota_tres" for="">N3</label>
+                  <label class="titulo_notas_trabalho" for="">T</label>
+               </div>
+               <div class="container_input_notas">
+                   <input class="input_text_notas" type="text" maxlength="1">
+                   <input class="input_text_notas" type="text" maxlength="1">
+                   <input class="input_text_notas" type="text" maxlength="1">
+                   <input class="input_text_notas" type="text" maxlength="1">
+               </div>
+            </div>
+            <div class="cardChamadaAluno">
+                <img  src="foto-perfil-redonda.webp" alt="">
+                <div>
+                   <h4 class="txt_nome_do_aluno">Vicenzzo Toth</h4>
+                   <p class="txt_ra_aluno">RA: 11112222333</p>
+                   <a href="#" class="link_mais_infos_aluno">Mais Infos</a>
+               </div>
+               <div class="container_titulos_das_notas">
+                  <label class="titulo_notas_nota_um" for="">N1</label>
+                  <label class="titulo_notas_nota_dois" for="">N2</label>
+                  <label class="titulo_notas_nota_tres" for="">N3</label>
+                  <label class="titulo_notas_trabalho" for="">T</label>
+               </div>
+               <div class="container_input_notas">
+                   <input class="input_text_notas" type="text" maxlength="1">
+                   <input class="input_text_notas" type="text" maxlength="1">
+                   <input class="input_text_notas" type="text" maxlength="1">
+                   <input class="input_text_notas" type="text" maxlength="1">
+               </div>
+            </div>
+            <div class="cardChamadaAluno">
+                <img  src="foto-perfil-redonda.webp" alt="">
+                <div>
+                   <h4 class="txt_nome_do_aluno">Vicenzzo Toth</h4>
+                   <p class="txt_ra_aluno">RA: 11112222333</p>
+                   <a href="#" class="link_mais_infos_aluno">Mais Infos</a>
+               </div>
+               <div class="container_titulos_das_notas">
+                  <label class="titulo_notas_nota_um" for="">N1</label>
+                  <label class="titulo_notas_nota_dois" for="">N2</label>
+                  <label class="titulo_notas_nota_tres" for="">N3</label>
+                  <label class="titulo_notas_trabalho" for="">T</label>
+               </div>
+               <div class="container_input_notas">
+                   <input class="input_text_notas" type="text" maxlength="1">
+                   <input class="input_text_notas" type="text" maxlength="1">
+                   <input class="input_text_notas" type="text" maxlength="1">
+                   <input class="input_text_notas" type="text" maxlength="1">
+               </div>
+            </div>
+            
+            </div>
+    
+</div>
+</body>
+</html>
